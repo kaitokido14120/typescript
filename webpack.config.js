@@ -6,7 +6,7 @@ module.exports = {
         bundle: './main.js', // Đầu vào là main.js sau khi chạy webpack build ra file bundle.js
         //tenfile: 'đường dẫn file đầu vào'
         maints: './ts/main.ts', // Đóng gói file main.ts và đổi tên đầu ra thành maints.js
-        indexhtml:'./index.html'
+   
     },
     output: {
         path: path.resolve(__dirname, 'dist'), //Định nghĩa thư mục đầu ra của file webpack sau khi đóng gói
@@ -36,16 +36,6 @@ module.exports = {
                     "css-loader", // translates CSS into CommonJS
                     "sass-loader" // compiles Sass to CSS, using Node Sass by default
                 ]
-            },
-            {
-                test: /\.html$/,
-                use: [{
-                    loader: 'html-loader',
-                    options: {
-                        name: "[name].[ext]",
-                        attrs: ['img:src', 'source:src']
-                    }
-                }]
             }
         ],
 
